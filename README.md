@@ -5,12 +5,13 @@ If you find this package useful and need Linux support, raise an issue and I wil
 
 # Installation
 
-NOTE: ffmpeg must be installed on your system and be available in the path. TODO: Add information on how to install ffmpeg
+NOTE: ffmpeg must be installed on your system and be available in the path. 
 I intend to be more helpful, but for the time being a quick Google search for ffmpeg installation should suffice.
+(TODO: Add information on how to install ffmpeg)
 
 ```
 git clone https://github.com/saltchicken/pyframes
-cd pyframs
+cd pyframes
 python setup.py install
 ```
 
@@ -18,8 +19,10 @@ python setup.py install
 
 Convert video to individual frames
 ```
-pyframes input_video.mp4 output_folder 10
+pyframes -i input_video.mp4 -o output_folder -r 10 --video
 ```
-input_video - Target video
-output_folder - Where to place frames
-10 - Frames per second. Be careful with this setting, higher values will result in a LOT of frames (TODO: Provide example of potential memory usage)
+
+Convert individual frames to video
+```
+pyframes -i input_folder -o output_video.mp4 -r 10 --frames
+```
