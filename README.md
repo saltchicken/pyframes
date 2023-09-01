@@ -11,7 +11,7 @@ I intend to be more helpful, but for the time being a quick Google search for ff
 
 ```
 git clone https://github.com/saltchicken/pyframes
-cd pyframs
+cd pyframes
 python setup.py install
 ```
 
