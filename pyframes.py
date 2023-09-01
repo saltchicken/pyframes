@@ -24,7 +24,6 @@ def video_to_frames(input, output_folder, rate):
         print(f'Error during conversion: {e}')
         
 def frames_to_video(input_folder, output, rate):
-    # ffmpeg -framerate 20 -pattern_type sequence -start_number 00000 -i ‘%05d-100.png’ -c:v libx264 -pix_fmt yuv420p out.mp4
     ffmpeg_command = [
         'ffmpeg',
         '-framerate', rate,
@@ -76,9 +75,5 @@ def main():
         # TODO: Check if everything ran correctly.
         return True
         
-    print("If this is reached some other issue happened.")
-        
-    
-    
 if __name__ == '__main__':
     main()
